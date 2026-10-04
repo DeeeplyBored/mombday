@@ -36,18 +36,18 @@ const TILE_COLORS = {
 const LEVELS = [
   {
     goal: 250,
-    title: "Look at you go ✨",
+    title: "LOOK AT YOU GO!",
     quote: "One step closer to your surprise..."
   },
   {
     goal: 500,
-    title: "You're getting good at this 💜",
-    quote: "I may have underestimated you."
+    title: "I KNEW YOU WERE GOOD AT THIS!",
+    quote: "Maybe I should have made it harder."
   },
   {
     goal: 800,
-    title: "Almost there...",
-    quote: "Just one last little challenge."
+    title: "YOU DID IT!",
+    quote: "Now for your surprise! 🎁"
   }
 ];
 
@@ -102,7 +102,7 @@ function renderBoard() {
       const tile = document.createElement("button");
 
       tile.type = "button";
-      tile.className = "tile";
+      tile.className = `tile symbol-${type}`;
       tile.textContent = SYMBOLS[type];
       tile.style.background = TILE_COLORS[type];
       tile.dataset.row = row;
@@ -360,3 +360,29 @@ document.getElementById("startButton").addEventListener("click", () => {
 document.getElementById("openCardButton").addEventListener("click", () => {
   showScreen(screens.card);
 });
+
+
+const originalButton = document.getElementById("originalButton");
+const originalOverlay = document.getElementById("originalOverlay");
+const closeOriginalButton = document.getElementById("closeOriginalButton");
+const overlayBackdrop = document.getElementById("overlayBackdrop");
+
+function openOriginalImage() {
+  originalOverlay.hidden = false;
+}
+
+function closeOriginalImage() {
+  originalOverlay.hidden = true;
+}
+
+if (originalButton && originalOverlay && closeOriginalButton && overlayBackdrop) {
+  originalButton.addEventListener("click", openOriginalImage);
+  closeOriginalButton.addEventListener("click", closeOriginalImage);
+  overlayBackdrop.addEventListener("click", closeOriginalImage);
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !originalOverlay.hidden) {
+      closeOriginalImage();
+    }
+  });
+}
