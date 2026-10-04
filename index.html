@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#c9b1e8">
+  <title>Happy Birthday, Mom ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+
+    <!-- INTRO -->
+    <section id="introScreen" class="screen intro-screen active">
+      <div class="intro-content">
+        <div class="floating-heart">♥</div>
+        <p class="eyebrow">A little something for you</p>
+        <h1>Happy Birthday,<br><span>Mom</span> ❤️</h1>
+        <p class="intro-text">
+          I love you.<br>
+          I made you something...
+        </p>
+        <p class="tease">But first, you have to earn it.</p>
+        <button id="startButton" class="primary-button">Unlock my surprise ✨</button>
+      </div>
+    </section>
+
+    <!-- GAME -->
+    <section id="gameScreen" class="screen game-screen">
+      <div class="game-header">
+        <div>
+          <p class="eyebrow">Mom's Birthday Match</p>
+          <h2>Match the magic ✨</h2>
+        </div>
+        <div class="level-pill">Level <span id="levelNumber">1</span>/3</div>
+      </div>
+
+      <p id="levelMessage" class="game-message">
+        Match 3 or more pieces to fill the meter.
+      </p>
+
+      <div class="stats">
+        <div>
+          <span class="stat-label">Score</span>
+          <strong id="score">0</strong>
+        </div>
+        <div>
+          <span class="stat-label">Goal</span>
+          <strong id="goal">250</strong>
+        </div>
+      </div>
+
+      <div class="progress-track">
+        <div id="progressBar" class="progress-bar"></div>
+      </div>
+
+      <div id="board" class="board" aria-label="Match three game board"></div>
+
+      <p class="hint">Swap two neighbouring pieces to make a match.</p>
+    </section>
+
+    <!-- LEVEL COMPLETE -->
+    <section id="levelScreen" class="screen level-screen">
+      <div class="level-complete-card">
+        <div class="big-icon">✨</div>
+        <p class="eyebrow">Level complete</p>
+        <h2 id="levelTitle">Nicely done!</h2>
+        <p id="levelQuote">One step closer to your surprise...</p>
+        <button id="nextLevelButton" class="primary-button">Next level →</button>
+      </div>
+    </section>
+
+    <!-- FINAL UNLOCK -->
+    <section id="unlockScreen" class="screen unlock-screen">
+      <div class="unlock-content">
+        <div class="big-icon gift">🎁</div>
+        <p class="eyebrow">You did it</p>
+        <h1>You unlocked it.</h1>
+        <p>
+          Okay, Mom.<br>
+          You've earned your birthday surprise. ❤️
+        </p>
+        <button id="openCardButton" class="primary-button">Open your card 💌</button>
+      </div>
+    </section>
+
+    <!-- CARD -->
+    <section id="cardScreen" class="screen card-screen">
+      <div class="card-wrapper">
+        <p class="eyebrow">For you, Mom</p>
+
+        <!-- Replace this placeholder with your actual card image later -->
+        <div class="card-placeholder">
+          <div class="placeholder-decoration">✦</div>
+          <h2>Your birthday card</h2>
+          <p>
+            Your handmade card will go here.
+          </p>
+          <span>Replace this box with your image ❤️</span>
+        </div>
+
+        <div class="final-message">
+          <h2>Happy Birthday, Mom ❤️</h2>
+          <p>
+            I love you more than I probably say.
+            Thank you for always being there for me.
+          </p>
+          <p class="signature">— Me</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
