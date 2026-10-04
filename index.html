@@ -20,7 +20,7 @@
           I love you.<br>
           I made you something...
         </p>
-        <p class="tease">But first, you have to earn it.</p>
+        <p class="tease">But first, you have to unlock it.</p>
         <button id="startButton" class="primary-button">Play Birthday Match ✨</button>
       </div>
     </section>
@@ -88,14 +88,22 @@
       <div class="card-wrapper">
         <p class="eyebrow">For you, Mom</p>
 
-        <!-- Replace this placeholder with your actual card image later -->
-        <div class="card-placeholder">
-          <div class="placeholder-decoration">✦</div>
-          <h2>Your birthday card</h2>
-          <p>
-            Your handmade card will go here.
-          </p>
-          <span>Replace this box with your image ❤️</span>
+        <div class="birthday-card">
+          <img src="momandme.png" alt="Pixel art of Mom and me" class="birthday-card-image">
+
+          <button id="originalButton" class="secondary-button" type="button">
+            View original image 📷
+          </button>
+        </div>
+
+        <div id="originalOverlay" class="image-overlay" hidden>
+          <div class="overlay-backdrop" id="overlayBackdrop"></div>
+
+          <div class="original-viewer" role="dialog" aria-modal="true" aria-label="Original photo">
+            <button id="closeOriginalButton" class="close-button" type="button" aria-label="Close original image">×</button>
+            <img src="original.png" alt="Original photo of Mom and me" class="original-image">
+            <p>Original picture before I turned it into pixel art ❤️</p>
+          </div>
         </div>
 
         <div class="final-message">
@@ -104,7 +112,7 @@
             I love you more than I probably say.
             Thank you for always being there for me.
           </p>
-          <p class="signature">— Me</p>
+          <p class="signature">— Magd</p>
         </div>
       </div>
     </section>
